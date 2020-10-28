@@ -13,6 +13,7 @@ namespace MiniVille
         public int Cout; //Cout de la carte
         public bool vol;
         public Player Launcher;
+
         public Cards(int val, string col, string name, int nbPiece, int cout,Player launcher)
         {
             this.AcVal = val;
@@ -23,6 +24,15 @@ namespace MiniVille
             this.Launcher = launcher;
             if (Color == "red") vol = true;
             //Trouver le joueur propriétaire de la carte construite. Comment?
+            //Launcher.Pieces -= nbPieceRecue; 
+        }
+        public Cards(int val, string col, string name, int nbPiece, int cout)
+        {
+            this.AcVal = val;
+            this.Color = col;
+            this.name = name;
+            this.nbPieceRecue = nbPiece;
+            this.Cout = cout;
             //Launcher.Pieces -= nbPieceRecue; 
         }
         public override string ToString()

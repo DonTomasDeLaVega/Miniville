@@ -9,11 +9,11 @@ namespace MiniVille
         public int NbFaces;
         public Random RandInt = new Random();
         public int Face { get; protected set; }
-        public De()
+        public DIE()
         {
             NbFaces = 6;
         }
-        public De(int nbFaces)
+        public DIE(int nbFaces)
         {
             NbFaces = nbFaces;
         }
