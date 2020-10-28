@@ -6,5 +6,32 @@ namespace MiniVille
 {
     class DIE
     {
+        public int NbFaces;
+        public Random RandInt = new Random();
+        public int Face { get; protected set; }
+        public De()
+        {
+            NbFaces = 6;
+        }
+        public De(int nbFaces)
+        {
+            NbFaces = nbFaces;
+        }
+
+        public virtual void Lancer()
+        {
+            Face = RandInt.Next(1, NbFaces + 1);// jet de dé 
+        }
+        public override string ToString()
+        {
+
+            string toString = string.Format("+---+\n| {0} |\n+---+", Face);// motif dé
+            return toString;
+
+        }
+
     }
+
 }
+
+
