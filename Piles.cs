@@ -43,7 +43,10 @@ namespace MiniVille
         }
         public Cards TirerCarte()
         {
-            return PileCards[PileCards.Count - 1];
+            Cards DerCarte = PileCards[PileCards.Count - 1];
+            PileCards.RemoveAt(PileCards.Count - 1);
+            Shuffle();
+            return DerCarte;
         }
         public void Shuffle()
         {
