@@ -6,5 +6,11 @@ namespace MiniVille
 {
     class Player
     {
+        public int Pieces = 3;
+        
+        public Player()
+        {
+
+        }
     }
 }

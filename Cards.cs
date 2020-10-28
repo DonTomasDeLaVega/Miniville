@@ -23,6 +23,7 @@ namespace MiniVille
             this.Launcher = launcher;
             if (Color == "red") vol = true;
             //Trouver le joueur propriétaire de la carte construite. Comment?
+            //Launcher.Pieces -= nbPieceRecue; 
         }
         public override string ToString()
         {
