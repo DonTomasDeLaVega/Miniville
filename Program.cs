@@ -7,6 +7,9 @@ namespace MiniVille
         static void Main(string[] args)
         {
             Console.WriteLine("");
+            Game game = new Game();
+            Console.Write(game);
+            Console.Read();
         }
     }
 }
