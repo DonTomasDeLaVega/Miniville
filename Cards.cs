@@ -14,7 +14,7 @@ namespace MiniVille
         public bool vol;
         //public Player Launcher;
 
-        public Cards(int val, string col, string name, int nbPiece, int cout,Player launcher)
+        public Cards(int val, string col, string name, int nbPiece, int cout)
         {
             this.AcVal = val;
             this.Color = col;

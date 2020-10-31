@@ -8,15 +8,15 @@ namespace MiniVille
     class Piles
     {
         public List<Cards> DiffCart;
-        public Cards CDB = new Cards(1,"blue","Champs de Blé", 1,1);
-        public Cards Ferme = new Cards(1, "blue", "Ferme", 1, 2);
-        public Cards Boulangerie = new Cards(2, "green", "Boulangerie", 2, 1);
+        public BlueCard CDB = new BlueCard(1,"Champs de Blé", 1,1);
+        public BlueCard Ferme = new BlueCard(1, "Ferme", 1, 2);
+        public GreenCard Boulangerie = new GreenCard(2, "Boulangerie", 2, 1);
         public RedCard cafe = new RedCard(3, "Café", 1,2);
         //public Cards cafe = new Cards(3, "red", "Café", 1, 2);
-        public Cards superette = new Cards(5, "green", "Superette", 3, 2);
-        public Cards Foret = new Cards(5, "blue", "Forêt", 1, 2);
-        public Cards Resto = new Cards(5, "red", "Restaurant", 2, 4);
-        public Cards Stade = new Cards(6, "blue", "Stade", 4, 6);
+        public GreenCard superette = new GreenCard(5, "Superette", 3, 2);
+        public BlueCard Foret = new BlueCard(5, "Forêt", 1, 2);
+        public RedCard Resto = new RedCard(5, "Restaurant", 2, 4);
+        public BlueCard Stade = new BlueCard(6, "Stade", 4, 6);
 
         public List<Cards> PileCards = new List<Cards>();
         public int NbCards = 30;
@@ -25,7 +25,7 @@ namespace MiniVille
         public Piles(int nbCards)
         {
             NbCards = nbCards;
-            DiffCart = new List<Cards> {
+   /*         DiffCart = new List<Cards> {
                 CDB,
                 Ferme,
                 Boulangerie,
@@ -34,7 +34,8 @@ namespace MiniVille
                 Foret,
                 Resto,
                 Stade
-            };
+
+            };*/
             CreatePile();
             }
         public void CreatePile()

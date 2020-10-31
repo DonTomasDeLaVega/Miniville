@@ -6,15 +6,15 @@ namespace MiniVille
 {
     class Game
     {
+        public Piles deck;
 
-        Piles deck = new Piles(30);
-        public Game() {
+        public Game(int nbCartes) {
+            Piles deck = new Piles(30);
 
         }
-        public override string ToString()
+        public void DispDiffCards()
         {
-            string toString = string.Format(deck.ToString);
-            return toString;
+            Console.Write("deck.DiffCart");
         }
     }
 }
