@@ -34,7 +34,7 @@ namespace MiniVille
         }
         public override string ToString()
         {
-            string toString = string.Format("|  {0}  ", name);
+            string toString = string.Format("|  {0}  ", name + "|");
             //Penser à changer la couleur du cw
             return toString;
         }
