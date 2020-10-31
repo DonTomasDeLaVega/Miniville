@@ -7,10 +7,13 @@ namespace MiniVille
     class Game
     {
         public Piles deck;
+        Player playerOne;
+        Player playerTwo;
 
         public Game(int nbCartes) {
-            deck = new Piles(30);
-
+            deck = new Piles(nbCartes);
+            playerOne = new Player(deck);
+            playerTwo = new Player(deck);
         }
         public void DispDiffCards()
         {

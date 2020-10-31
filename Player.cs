@@ -12,8 +12,8 @@ namespace MiniVille
         public Player(Piles deck)
         {
             this.deck = deck;
-            this.main.Add(new Cards(1, "blue", "Champs de Blé", 1, 1));
-            this.main.Add(new Cards(2, "green", "Boulangerie", 2, 1));
+            main.Add(new Cards(1, "blue", "Champs de Blé", 1, 1));
+            main.Add(new Cards(2, "green", "Boulangerie", 2, 1));
         }
     }
 }
