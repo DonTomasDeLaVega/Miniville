@@ -25,7 +25,7 @@ namespace MiniVille
         public Piles(int nbCards)
         {
             NbCards = nbCards;
-   /*         DiffCart = new List<Cards> {
+           DiffCart = new List<Cards> {
                 CDB,
                 Ferme,
                 Boulangerie,
@@ -35,14 +35,14 @@ namespace MiniVille
                 Resto,
                 Stade
 
-            };*/
+            };
             CreatePile();
             }
         public void CreatePile()
         {
             for (int i = 0; i < NbCards; i++)
             {
-                PileCards.Add(DiffCart[randint.Next(0, DiffCart.Count+1)]);
+                PileCards.Add(DiffCart[randint.Next(0, DiffCart.Count)]);
             }
         }
         public Cards TirerCarte()
@@ -58,7 +58,8 @@ namespace MiniVille
         }
         public override string ToString()
         {
-            string toString = string.Format("");
+
+            string toString = "";
             foreach (Cards c in PileCards)
             {
                 toString += string.Format(c.ToString());

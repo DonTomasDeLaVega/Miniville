@@ -9,12 +9,12 @@ namespace MiniVille
         public Piles deck;
 
         public Game(int nbCartes) {
-            Piles deck = new Piles(30);
+            deck = new Piles(30);
 
         }
         public void DispDiffCards()
         {
-            Console.Write("deck.DiffCart");
+            Console.Write(deck.ToString());
         }
     }
 }

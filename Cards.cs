@@ -11,7 +11,6 @@ namespace MiniVille
         public string name;
         public int nbPieceRecue;
         public int Cout; //Cout de la carte
-        public bool vol;
         //public Player Launcher;
 
         public Cards(int val, string col, string name, int nbPiece, int cout)
@@ -35,7 +34,7 @@ namespace MiniVille
         }
         public override string ToString()
         {
-            string toString = string.Format("{0}\n+----+\n|{1}   |\n|    |\n|    |\n|{2}  {3}|\n+-----+", name, AcVal, nbPieceRecue, Cout);
+            string toString = string.Format("|  {0}  ", name);
             //Penser à changer la couleur du cw
             return toString;
         }

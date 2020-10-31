@@ -4,21 +4,18 @@ using System.Text;
 
 namespace MiniVille
 {
-    class RedCard
+    class RedCard : Cards
     {
         //Les cartes rouges se déclenche que lors du tour de l'autre joueur
-        public int AcVal; //Valeur d'activation
-        public string Color;
-        public string Name;
-        public int nbPieceRecue;
-        public int Cout; //Cout de la carte
 
-        public RedCard(int val, string name, int nbPiece, int cout)
+
+        public RedCard(int val, string name, int nbPiece, int cout) : base(val, name, nbPiece, cout)
         {
             Color = "red";
             AcVal = val;
-            Name = name;
+            this.name = name;
             nbPieceRecue = nbPiece;
+            Cout = cout;
 
         }
         public void CardTriggered(Player Launcher, Player Owner)
