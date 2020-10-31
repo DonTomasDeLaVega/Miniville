@@ -75,8 +75,9 @@ namespace MiniVille
                 else if (c.name == "Forêt") indexes[5]++;
                 else if (c.name == "Restaurant") indexes[6]++;
                 else if (c.name == "Stade") indexes[7]++;
-                toString += string.Format("\n Boulangerie (x{0}) | Ferme (x{1})\nChamps de Blé: {2} | Café : {3} |\nSuperette : {4} | Forêt : {5} |\n Restaurant : {6} | Stade : {7} |", indexes[2], indexes[1], indexes[0], indexes[3], indexes[4], indexes[5], indexes[6], indexes[7]);
             }
+            toString += string.Format("\nBoulangerie (x{0}) | Ferme (x{1})\nChamps de Blé: {2} | Café : {3} |\nSuperette : {4} | Forêt : {5} |\nRestaurant : {6} | Stade : {7} |", indexes[2], indexes[1], indexes[0], indexes[3], indexes[4], indexes[5], indexes[6], indexes[7]);
+
             return toString;
         }
     }

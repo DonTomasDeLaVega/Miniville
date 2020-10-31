@@ -21,7 +21,7 @@ namespace MiniVille
                     Console.WriteLine("Veuillez entrer un nombre valide!");
                 }
             }
-            Console.WriteLine("");
+            Console.Clear();
             Game game = new Game(input);
             game.DispDiffCards();
             Console.Read();

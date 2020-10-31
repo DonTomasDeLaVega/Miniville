@@ -17,7 +17,10 @@ namespace MiniVille
         }
         public void DispDiffCards()
         {
-            Console.Write(deck.ToString());
+            Console.WriteLine("Joueur 1:");
+            Console.Write(playerOne.ToString());
+            Console.WriteLine("Joueur 2:");
+            Console.Write(playerTwo.ToString());
         }
     }
 }
