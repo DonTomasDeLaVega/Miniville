@@ -51,6 +51,8 @@ Je lance mon dé, il tombe sur 3. Si j’ai une carte de valeur 3 verte alors je re
 
 Comment accéder au jeu :
 
+Miniville\Executable\MiniVille.exe
+
 
 
 
