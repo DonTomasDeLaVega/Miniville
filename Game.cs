@@ -36,32 +36,37 @@ namespace MiniVille
                 de.Lancer();
                 Console.WriteLine(de.ToString());
                 value = de.Face;
-                foreach (BlueCard c in playerOne.main) //tour du j1, on verifie ses bluecard
+                foreach (Cards cards in playerOne.main) //tour du j1, on verifie ses bluecard
                 {
-                    if (c.AcVal == value)
+                    if (cards.GetType() == typeof(BlueCard))
                     {
-                        c.CardTriggered(playerOne);
+                        BlueCard tmp = (BlueCard)cards;
+                        tmp.CardTriggered(playerOne);
+ 
                     }
                 }
-                foreach (GreenCard c in playerOne.main) //tour du j1, on verifie ses greenCards
+                foreach (Cards cards in playerOne.main) //tour du j1, on verifie ses greencard
                 {
-                    if (c.AcVal == value)
+                    if (cards.GetType() == typeof(GreenCard))
                     {
-                        c.CardTriggered(playerOne);
+                        GreenCard tmp = (GreenCard)cards;
+                        tmp.CardTriggered(playerOne);
                     }
                 }
-                foreach (GreenCard c in playerTwo.main) //tour du j1, on verifie les green cards ennemies
+                foreach (Cards cards in playerTwo.main) //tour du j1, on verifie les green cards ennemies
                 {
-                    if (c.AcVal == value)
+                    if (cards.GetType() == typeof(GreenCard))
                     {
-                        c.CardTriggered(playerTwo);
+                        GreenCard tmp = (GreenCard)cards;
+                        tmp.CardTriggered(playerTwo);
                     }
                 }
-                foreach (RedCard c in playerTwo.main) //tour du j1, on verifie les redCards du j2
+                foreach (Cards cards in playerTwo.main) //tour du j1, on verifie les redCards du j2
                 {
-                    if (c.AcVal == value)
+                    if (cards.GetType() == typeof(RedCard))
                     {
-                        c.CardTriggered(playerOne, playerTwo);
+                        RedCard tmp = (RedCard)cards;
+                        tmp.CardTriggered(playerOne, playerTwo);
                     }
                 }
                 DispPlayerCards();
@@ -69,7 +74,7 @@ namespace MiniVille
                 Cards piochee = deck.TirerCarte();
                 Console.WriteLine("Tu as pioché cette carte : {0}\nVeux tu l'acheter? (Pour la modique somme de {1} pièces.)\n(Vous avez {2} pièces)\n", piochee.ToString(), piochee.Cout, playerOne.Pieces);
                 string choix = null;
-                while (choix != "o" && choix != "o")
+                while (choix != "o" && choix != "n")
                 {
                     Console.WriteLine("(Marquez o pour oui, et n pour non.)");
                     choix = Console.ReadLine();
@@ -79,7 +84,7 @@ namespace MiniVille
                     playerOne.main.Add(piochee);
                     Console.WriteLine("Vous avez pioché la carte!");
                 }
-                else
+                else if (choix =="n")
                 {
                     Console.WriteLine("La carte a brulé, devant vous. Et par la carte, je veux dire l'établissement. Tout à cramé. Pouf, plus rien.");
                 }
@@ -91,40 +96,45 @@ namespace MiniVille
                 de.Lancer();
                 Console.WriteLine(de.ToString());
                 value = de.Face;
-                foreach (BlueCard c in playerTwo.main) //tour du j1, on verifie ses bluecard
+                foreach (Cards cards in playerTwo.main) //tour du j2, on verifie ses bluecard
                 {
-                    if (c.AcVal == value)
+                    if (cards.GetType() == typeof(BlueCard))
                     {
-                        c.CardTriggered(playerTwo);
+                        BlueCard tmp = (BlueCard)cards;
+                        tmp.CardTriggered(playerTwo);
                     }
                 }
-                foreach (GreenCard c in playerOne.main) //tour du j1, on verifie ses greenCards
+                foreach (Cards cards in playerTwo.main) //tour du j2, on verifie ses greenCards
                 {
-                    if (c.AcVal == value)
+                    if (cards.GetType() == typeof(GreenCard))
                     {
-                        c.CardTriggered(playerOne);
+                        GreenCard tmp = (GreenCard)cards;
+                        tmp.CardTriggered(playerTwo);
                     }
                 }
-                foreach (GreenCard c in playerTwo.main) //tour du j1, on verifie les green cards ennemies
+                foreach (Cards cards in playerOne.main) //tour du j2, on verifie les green cards ennemies
                 {
-                    if (c.AcVal == value)
+                    if (cards.GetType() == typeof(GreenCard))
                     {
-                        c.CardTriggered(playerTwo);
+                        GreenCard tmp = (GreenCard)cards;
+                        tmp.CardTriggered(playerOne);
                     }
                 }
-                foreach (RedCard c in playerOne.main) //tour du j1, on verifie les redCards du j2
+                foreach (Cards cards in playerOne.main) //tour du j2, on verifie les redCards du j1
                 {
-                    if (c.AcVal == value)
+                    if (cards.GetType() == typeof(RedCard))
                     {
-                        c.CardTriggered(playerTwo, playerOne);
+                        RedCard tmp = (RedCard)cards;
+                        tmp.CardTriggered(playerTwo, playerOne);
                     }
                 }
+
                 DispPlayerCards();
                 //Achat d'une carte maintenant:
                 piochee = deck.TirerCarte();
                 Console.WriteLine("Tu as pioché cette carte : {0}\nVeux tu l'acheter? (Pour la modique somme de {1} pièces.)\n(Vous avez {2} pièces)\n", piochee.ToString(), piochee.Cout, playerOne.Pieces);
                 choix = null;
-                while (choix != "o" && choix != "o")
+                while (choix != "o" && choix != "n")
                 {
                     Console.WriteLine("(Marquez o pour oui, et n pour non.)");
                     choix = Console.ReadLine();
@@ -134,7 +144,7 @@ namespace MiniVille
                     playerOne.main.Add(piochee);
                     Console.WriteLine("Vous avez pioché la carte!");
                 }
-                else
+                else if (choix == "n")
                 {
                     Console.WriteLine("La carte a brulé, devant vous. Et par la carte, je veux dire l'établissement. Tout à cramé. Pouf, plus rien.");
                 }
@@ -145,8 +155,9 @@ namespace MiniVille
             {
                 if (playerTwo.Pieces >= 20)
                 {
-                    if (playerOne.Pieces != playerTwo.Pieces) {
-                        Console.WriteLine("Égalité! Les deux joueurs ont dépassés les 20 pièces en même temps! (Mais le Joueur {0} a plus de pièces)",playerTwo.Pieces > playerOne.Pieces ? "2" :"1");
+                    if (playerOne.Pieces != playerTwo.Pieces)
+                    {
+                        Console.WriteLine("Égalité! Les deux joueurs ont dépassés les 20 pièces en même temps! (Mais le Joueur {0} a plus de pièces)", playerTwo.Pieces > playerOne.Pieces ? "2" : "1");
                     }
                 }
                 else
@@ -156,10 +167,10 @@ namespace MiniVille
             }
             else
             {
-                    Console.WriteLine("Le joueur 2 a gagné!");
+                Console.WriteLine("Le joueur 2 a gagné!");
 
             }
-            
+
             DispPlayerCards();
         }
     }
