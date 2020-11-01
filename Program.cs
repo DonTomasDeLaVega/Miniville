@@ -23,8 +23,7 @@ namespace MiniVille
             }
             Console.Clear();
             Game game = new Game(input);
-            game.DispDiffCards();
-            Console.Read();
+            game.DispPlayerCards();
         }
     }
 }
