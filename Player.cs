@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,6 +9,7 @@ namespace MiniVille
     {
         public int Pieces = 3;
         public List<Cards> main = new List<Cards>();
+        public string nomJoueur;
         public Piles deck;
         public Player(Piles deck)
         {
@@ -38,5 +40,12 @@ namespace MiniVille
 
             return toString;
         }
+        public void ChangeNom()
+        {
+            Console.WriteLine("Quel est votre nom ?");
+            nomJoueur = Console.ReadLine();
+        }
+
     }
 }
+
