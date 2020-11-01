@@ -15,7 +15,7 @@ namespace MiniVille
             this.name = name;
             nbPieceRecue = nbPiece;
         }
-        public void CardTriggered(Player O)
+        public override void CardTriggered(Player O, Player L)
         {
             O.Pieces += nbPieceRecue;
         }

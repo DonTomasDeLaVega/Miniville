@@ -18,7 +18,7 @@ namespace MiniVille
             Cout = cout;
 
         }
-        public void CardTriggered(Player Launcher, Player Owner)
+        public override void CardTriggered(Player Launcher, Player Owner)
         {
             Launcher.Pieces -= nbPieceRecue;
             Owner.Pieces += nbPieceRecue;

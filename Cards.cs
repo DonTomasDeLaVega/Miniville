@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MiniVille
 {
-    class Cards
+    abstract class Cards
     {
         public int AcVal; //Valeur d'activation
         public string Color;
@@ -38,6 +38,6 @@ namespace MiniVille
             //Penser à changer la couleur du cw
             return toString;
         }
-        public abstract void CardTriggered();
+        public abstract void CardTriggered(Player O, Player L);
     }
 }

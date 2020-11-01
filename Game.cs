@@ -41,12 +41,12 @@ namespace MiniVille
                     if (cards.Color == "blue")
                     {
                         BlueCard tmp = (BlueCard)cards;
-                        tmp.CardTriggered(playerOne);
+                        tmp.CardTriggered(playerOne, playerTwo);
                     }
                     else if (cards.Color == "green")//Et ses greencards
                     {
                         GreenCard tmp = (GreenCard)cards;
-                        tmp.CardTriggered(playerOne);
+                        tmp.CardTriggered(playerOne, playerOne);
                     }
                 }
 
@@ -55,7 +55,7 @@ namespace MiniVille
                     if (cards.Color == "green")
                     {
                         GreenCard tmp = (GreenCard)cards;
-                        tmp.CardTriggered(playerTwo);
+                        tmp.CardTriggered(playerTwo,playerOne);//Player one inutile ici
                     }
                     if (cards.Color == "red")
                     {
@@ -97,12 +97,12 @@ namespace MiniVille
                     if (cards.Color == "blue")
                     {
                         BlueCard tmp = (BlueCard)cards;
-                        tmp.CardTriggered(playerTwo);
+                        tmp.CardTriggered(playerTwo,playerOne);
                     }
                     if (cards.Color == "green")
                     {
                         GreenCard tmp = (GreenCard)cards;
-                        tmp.CardTriggered(playerTwo);
+                        tmp.CardTriggered(playerTwo,playerOne);
                     }
                 }
                 foreach (Cards cards in playerOne.main) //tour du j2, on verifie les green cards ennemies
@@ -110,7 +110,7 @@ namespace MiniVille
                     if (cards.Color == "green")
                     {
                         GreenCard tmp = (GreenCard)cards;
-                        tmp.CardTriggered(playerOne);
+                        tmp.CardTriggered(playerOne,playerTwo);
                     }
                     if (cards.Color == "red")
                     {

@@ -16,7 +16,7 @@ namespace MiniVille
             nbPieceRecue = nbPiece;
 
         }
-        public void CardTriggered(Player Owner)
+        public override void CardTriggered(Player Owner, Player L)
         {
             Owner.Pieces += nbPieceRecue;
         }
