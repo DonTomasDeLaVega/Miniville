@@ -10,7 +10,7 @@ namespace MiniVille
 
         public GreenCard(int val, string name, int nbPiece, int cout) : base(val, name, nbPiece, cout)
         {
-            Color = "red";
+            Color = "green";
             AcVal = val;
             this.name = name;
             nbPieceRecue = nbPiece;

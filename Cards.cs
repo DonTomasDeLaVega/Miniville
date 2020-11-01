@@ -38,9 +38,6 @@ namespace MiniVille
             //Penser à changer la couleur du cw
             return toString;
         }
-        public virtual void CardTriggered()
-        {
-
-        }
+        public abstract void CardTriggered();
     }
 }

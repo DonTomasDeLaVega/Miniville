@@ -11,11 +11,11 @@ Carte Rouge : s’active lorsque c’est l’autre joueur qui joue.
 
 
 
-Verte Boulangerie : nombre du dé : 1, nombre de pièces recues :  1, prix de la carte : 1
+Bleu Champs de blé : nombre du dé : 1, nombre de pièces recues :  1, prix de la carte : 1
 
 Verte Superette : nombre du dé : 5, nombre de pièces recues :  3, prix de la carte : 2
 
-Bleu Champs de blé : nombre du dé : 2, nombre de pièces recues :  2, prix de la carte : 1
+Verte Boulangerie : nombre du dé : 2, nombre de pièces recues :  2, prix de la carte : 1
 
 Bleu Ferme : nombre du dé : 1, nombre de pièces recues :  1, prix de la carte : 2
 
@@ -32,22 +32,20 @@ Rouge Restaurant : nombre du dé : 5, nombre de pièces recues :  2, prix de la ca
 
 Attention :
 
+A chaque fois qu’on lance un dé on vérifie nos cartes pour voir si l'effet d'une carte peux s'activer.
+(Ex: la boulangerie se déclenchera si on obtiens un 1, et on gagnera une pièce.)
 
-Indépendament des cartes que vous avez, vous ne pouvez jouer que des cartes dont la valeur est égale à celle qui est tombé sur le dé.
+On peut acheter d’autres cartes avec nos pièces pour gagner plus vite d’autres pièces, et ce à la fin de
+chaque lancé de dé.
 
-Les bénéfices reviennent à celui ou ceux qui ont cette même carte. (ex :  je joue la carte boulangerie, tous ceux qui ont la boulangerie gagnent la récompense)
-
-A chaque fois qu’on lance un dé on vérifie nos cartes pour savoir si on peut en jouer une ou pas.
-
-On peut acheter d’autres cartes avec nos pièces pour gagner plus vite d’autres pièces.
-
-L’bojectif est d’avoir 20 pièces le plus rapidement possible.
+L’objectif est d’avoir 20 pièces le plus rapidement possible.
 
 
 
 Exemple d’un tour :
 
-Je lance mon dé, il tombe sur 3. Si j’ai une carte de valeur 3 verte alors je recois l’argent. Si j’ai une carte de valeur 3 et bleu alors je recois l’argent. Si mon adversaire a une carte rouge de valeur 3 alors il l’a joue. On distribue les pièces aux joueurs et je passe le dé au prochain joueur.
+Je lance mon dé, il tombe sur 3. Si j’ai une carte de valeur 3 verte alors je recois l’argent. Si j’ai une carte de valeur 3 et bleu alors je recois l’argent.
+Si mon adversaire a une carte rouge de valeur 3 alors son effet s'active également. On distribue les pièces aux joueurs et je passe le dé au prochain joueur.
 
 Comment accéder au jeu :
 
