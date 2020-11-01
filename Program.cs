@@ -24,6 +24,7 @@ namespace MiniVille
             Console.Clear();
             Game game = new Game(input);
             game.DispPlayerCards();
+            game.RunGame();
         }
     }
 }
